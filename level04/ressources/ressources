@@ -1,0 +1,7 @@
+On a un script perl
+On remarque que lorsque il print un truc en backquote ça l'exécute comme une commande bash
+La petit s dans les autorisations indique que ça s'exécute avec les droits de l'owner => flag04
+CGI = framework perl pour exécuter requête http
+Syntage : 
+http://192.168.56.102:4747/?x=`getflag`
+Check flag.Here is your token : ne2searoevaevoem4ov4ar8ap
