@@ -1,0 +1,6 @@
+On remarque le s dans les droits => l'exécutable s'exécute avec les droits de l'owner => flag03
+En décompilant on voit qu'il prend l'env en argument
+Il utilise un echo pour écrire exploit me
+On crée un nouveau dossier PATH avec un exécutable echo qui appelle getflag
+export PATH=/tmp/myPath:$PATH
+qi0maab88jeaj46qoumi7maus
