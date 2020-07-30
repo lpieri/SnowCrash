@@ -1,0 +1,5 @@
+On observe dans le dossier mail un mail level05 qui contient ce qui ressemble à une contrab
+Elle exécute un scrpt toutes les 5 secondes sous l'utilisateur flag05 (su -c)
+Ce script parcourt tous les fichiers dans le dossier /opt/openarenaserver, et s'ils sont des scripts les exécute, puis supprime le fichier
+Nous concevons un script qui appelle getflag et redirige la sortie dans un fichier dans tmp
+Check flag.Here is your token : viuaaale9huek52boumoomioc
