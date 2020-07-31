@@ -1,0 +1,39 @@
+Il a rien a exploiter aucun fichier dans le home, rien appartenant au group flag14, juste rien sauf un user flag14 donc on suppose q'un flag existe quand meme, a part exploit getflag il a rien a faire
+
+~$ gdb getflag
+(gdb) disassemble main
+[...]
+   0x08048989 <+67>:	call   0x8048540 <ptrace@plt>
+   0x0804898e <+72>:	test   %eax,%eax
+   0x08048990 <+74>:	jns    0x80489a8 <main+98>
+[...]
+   0x08048afd <+439>:	call   0x80484b0 <getuid@plt>
+   0x08048b02 <+444>:	mov    %eax,0x18(%esp)
+[...]
+
+(gdb) break *0x0804898e
+Breakpoint 1 at 0x804898e
+
+(gdb) break *0x08048b02
+Breakpoint 2 at 0x8048b02
+
+(gdb) r
+Starting program: /bin/getflag
+
+Breakpoint 1, 0x0804898e in main ()
+
+(gdb) set $eax = 0
+
+(gdb) s
+Single stepping until exit from function main,
+which has no line number information.
+
+Breakpoint 2, 0x08048b02 in main ()
+
+(gdb) set $eax = 0xbc6
+
+(gdb) s
+Single stepping until exit from function main,
+which has no line number information.
+Check flag.Here is your token : 7QiHafiNa3HVozsaXkawuYrTstxbpABHD8CPnHJ
+
