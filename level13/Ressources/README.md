@@ -1,8 +1,18 @@
-~$ ./level13
-UID 2013 started us but we we expect 4242
+# Level 13
 
-~$ gdb level13
-[...]
+Un binaire est présent `level13`. Quand on l'éxecute il nous dit qu'il faut être l'utilisateur ayant l'UID `4242`
+
+```sh
+~ ./level13
+UID 2013 started us but we we expect 4242
+```
+
+Nous pouvons exploiter le binaire avec `gdb` pour faire croire à l'executable que nous somme l'utilisateur ayant l'UID `4242`
+
+Nous avons décompile le main, pour trouver l'endroit ou il appel la fonction `getuid`, à l'instruction juste après nous avons mis un break point, pour pouvoir modifier le registre `%eax` et lui assigner la valeur `0x1092` soit `4242` en hexadécimal, il ne reste plus qu'à run le programme dans `gdb` avec `r`.
+
+```sh
+~ gdb level13
 (gdb) disassemble main
 Dump of assembler code for function main:
    0x0804858c <+0>:	push   %ebp
@@ -42,3 +52,5 @@ which has no line number information.
 your token is 2A31L79asukciNyi8uppkEuSx
 0xb7e454d3 in __libc_start_main () from /lib/i386-linux-gnu/libc.so.6
 (gdb)
+```
+
