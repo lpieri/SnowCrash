@@ -34,7 +34,7 @@ Nous avons donc `scp` un script bash qui appel la commande `getflag` et redirige
 
 ```shell
 ~ scp -P 4242 script level05@192.168.56.101:/opt/openarenaserver
-level05@192.168.56.101's password:
+level05@192.168.56.101s password:
 script                                          100%   37    28.7KB/s   00:00
 ~ chmod 777 /opt/openarenaserver/script
 ~ cat /tmp/flag
