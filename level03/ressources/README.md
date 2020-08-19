@@ -1,6 +1,6 @@
 # Level 03
 
-Dans le home de `level03` on remarque qu'il existe un binaire nommé `level03`, en executant la commande `ls -la` on peut voir que le binaire s'exécute avec les droits de l'owner c'est à dire `flag03`
+Dans le home de `level03` on remarque qu'il existe un binaire nommé `level03`. En executant la commande `ls -la`, on peut voir un stickybit qui nous informe que le binaire s'exécute avec les droits de l'owner, c'est à dire `flag03`.
 
 ```sh
 ~ ls -la
@@ -13,18 +13,18 @@ d--x--x--x 1 root    users    340 Aug 30  2015 ..
 -rwsr-sr-x 1 flag03  level03 8627 Mar  5  2016 level03
 ```
 
-Quand on lance le binaire, il écrit sur l'entrée standart `Exploit me`, on comprend alors qu'il faut faire du reverse ingénierie.
+Quand on lance le binaire, il écrit sur l'entrée standart `Exploit me`, on comprend alors qu'il faut faire du reverse engineering.
 
 ```sh
 ~ ./level03
 Exploit me
 ```
 
-On l'as décompiler avec [ghidra](https://ghidra-sre.org/) pour une meilleure visibilité car il décompile en `ASM` et traduit l'`ASM` en pseudo-code `C`. (Ici le screenshot sera que du pseudo-code `C`)
+On décompile le binaire avec [ghidra](https://ghidra-sre.org/) pour une meilleure compréhension car il décompile en `ASM` et traduit l'`ASM` en pseudo-code `C`. (Screenshots en pseudo-code `C`)
 
 ![Pseudo Code C du binaire Level03](../../assets/level03-ghidra-c.png)
 
-On peux voir qu'il utilise l'enviromnent pour appeler `echo`, on as donc crée un dossier `myPath` dans `/tmp` avec un script bash appeler `echo` qui appel la commande `getflag`.
+On peux voir qu'il utilise l'enviromnent pour appeler `echo`. On crée un dossier `myPath` dans `/tmp` contenant un script bash appelé `echo` qui appelle la commande `getflag`.
 
 ```shell
 ~ mkdir /tmp/myPath
