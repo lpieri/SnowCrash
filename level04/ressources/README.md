@@ -20,7 +20,7 @@ total 16
 -rwsr-sr-x  1 flag04  level04  152 Mar  5  2016 level04.pl
 ```
 
-Nous avons d'abord `cat` le fichier pour comprendre ce que le script perl fessait:
+Nous avons d'abord `cat` le fichier pour comprendre ce que le script perl faisait:
 
 ```perl
 #!/usr/bin/perl
@@ -34,19 +34,19 @@ sub x {
 x(param("x"));
 ```
 
-Le script perl utilise `CGI` qui est un framework pour exécuter des requêtes http, ici il prend des paramètres dans la requête comme on peut le voir avec `qw{param}`.
+Le script perl utilise `CGI` qui est un framework pour exécuter des requêtes http. Ici il prend des paramètres dans la requête comme on peut le voir avec `qw{param}`.
 
-La "fonction" `x` print le résultat de la commande `echo $y`, `$y` est ici le premier paramètre passé à la fonction x qui le paramètre `x` passé dans la requête http.
+La "fonction" `x` print le résultat de la commande `echo $y`. `$y` est ici le premier paramètre passé à la fonction x, qui est le paramètre `x` passé dans la requête http.
 
-Nous savons que nous pouvons executer une commande avant un `echo` avec des `backquote`
+Nous savons que nous pouvons executer une commande dans un `echo` avec des `backquote`
 
 ```shell
 ~ echo `ls -la`
 total 16 dr-xr-x---+ 1 level04 level04 120 Mar 5 2016 . d--x--x--x 1 root users 340 Aug 30 2015 .. -r-x------ 1 level04 level04 220 Apr 3 2012 .bash_logout -r-x------ 1 level04 level04 3518 Aug 30 2015 .bashrc -r-x------ 1 level04 level04 675 Apr 3 2012 .profile -rwsr-sr-x 1 flag04 level04 152 Mar 5 2016 level04.pl
 ```
 
-Nous savons aussi que le script perl est éxecuté avec l'utilisateur `flag04`
+Nous savons aussi que le script perl est éxecuté avec les droits de l'utilisateur `flag04`
 
-Il ne nous reste plus qu'à exécuter le script via une requête http, avec `# localhost:4747` nous savons que la requête est écouter via le port `4747`
+Il ne nous reste plus qu'à exécuter le script via une requête http. La commande `# localhost:4747` nous permets de nous assurer que la requête est écoutée via le port `4747`
 
 ![Requête Http pour exécuter la commande getflag](../../assets/level04-web.png)
