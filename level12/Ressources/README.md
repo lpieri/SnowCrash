@@ -6,11 +6,11 @@ Comme pour le level 4, le script perl est un serveur web écoutant sur le port `
 
 Cette page web prend donc 2 paramètres cette fois ci, `x` et `y`.
 
-- `x` Passe dans 2 regex une pour passé tous les charactère en `upper case` et une autre qui supprime tous les espaces, puis est utiliser pour executer la commande `egrep`.
+- `x` Passe dans 2 regex, une pour passer tous les charactères en `upper case`, et une autre qui supprime tous les espaces, puis est utilisée pour executer la commande `egrep`.
 
 - `y` ne nous servira pas.
 
-`egrep` est une commande qui va rechercher, des patterns de recherche et le dossier de recherche.
+`egrep` est une commande qui va rechercher un motif dans des dossiers qui respectent ce motif.
 
 Il nous suffit donc de `scp` un script bash dans `/tmp` comme celui du level 05, en majuscules (pour la regex).
 
@@ -24,7 +24,7 @@ Nous pouvons nous rendre sur l'url
 http://192.168.56.101:4646/?x=`/*/script`
 ```
 
-Il nous reste plus qu'a `cat` le fichier `/tmp/flag`
+Il ne nous reste plus qu'à `cat` le fichier `/tmp/flag`
 
 ```sh
 ~ cat /tmp/flag
