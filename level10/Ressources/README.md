@@ -2,7 +2,7 @@
 
 Comme pour le level 8 et 9 nous avons toujours 2 fichiers, un binaire portant le nom du level et un fichier token.
 
-Comme pour le level 8 level10 n'avons pas les droits pour lire le fichier token, mais le binaire possède un stickybit qui lui donne les droit de son owner flag10, qui est le même que l'owner du token.
+Comme pour le level 8 et le level 10, n'avons pas les droits pour lire le fichier token, mais le binaire possède un stickybit qui lui donne les droit de son owner flag10, qui est le même que l'owner du token.
 
 Quand on décompile le binaire, on peut voir qu'il essaye de se connecter à un adresse ip passée en argument sur le port `6969` et d'écrire le fichier passé en argument sur le serveur.
 
