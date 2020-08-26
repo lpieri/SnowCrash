@@ -1,15 +1,15 @@
 # Level 13
 
-Un binaire est présent `level13`. Quand on l'éxecute il nous dit qu'il faut être l'utilisateur ayant l'UID `4242`
+Un binaire est présent `level13`. Quand on l'éxecute, il nous indique qu'il faut être l'utilisateur ayant l'UID `4242`
 
 ```sh
 ~ ./level13
 UID 2013 started us but we we expect 4242
 ```
 
-Nous pouvons exploiter le binaire avec `gdb` pour faire croire à l'executable que nous somme l'utilisateur ayant l'UID `4242`
+Nous pouvons exploiter le binaire avec `gdb` pour faire croire à l'exécutable que nous sommes l'utilisateur ayant l'UID `4242`
 
-Nous avons décompile le main, pour trouver l'endroit ou il appel la fonction `getuid`, à l'instruction juste après nous avons mis un break point, pour pouvoir modifier le registre `%eax` et lui assigner la valeur `0x1092` soit `4242` en hexadécimal, il ne reste plus qu'à run le programme dans `gdb` avec `r`.
+Nous avons décompilé le main, pour trouver l'endroit ou il appelle la fonction `getuid`. À l'instruction suivante, nous mettons un break point afin de pouvoir modifier le registre `%eax` et lui assigner la valeur `0x1092` soit `4242` en hexadécimal. Il ne reste plus qu'à run le programme dans `gdb` avec `r`.
 
 ```sh
 ~ gdb level13
