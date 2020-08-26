@@ -1,6 +1,6 @@
 # SnowCrash
 
-Projet de sécuriter de 42.
+Projet de sécurité de 42.
 
 ## Sommaire
 
