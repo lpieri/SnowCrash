@@ -33,7 +33,7 @@ Password:
 Dont forget to launch getflag !
 ~ getflag
 Check flag.Here is your token : x24ti5gi3x0ol2eh4esiuxias
-~ su level03
+~ su level01
 Password:
 ```
 
