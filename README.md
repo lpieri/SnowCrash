@@ -1,5 +1,7 @@
 # SnowCrash
 
+## Description
+
 Projet de sécurité de 42.
 
 ## Sommaire
@@ -34,3 +36,8 @@ Projet de sécurité de 42.
 
 [Level14](/level14/Ressources)
 
+## Contributeur
+
+[Suzanne Repellin](https://github.com/SuzanneRepellin)
+
+[Louise Pieri](https://github.com/lpieri)
