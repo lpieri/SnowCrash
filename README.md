@@ -2,7 +2,7 @@
 
 ## Description
 
-Projet de sécurité de 42.
+Premier projet de la branche sécurité de 42 Born2Code.
 
 ## Sommaire
 
