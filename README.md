@@ -40,7 +40,7 @@ Premier projet de la branche sécurité de 42 Born2Code.
 
 [Level14](/level14/Ressources)
 
-## Contributeur
+## Contributrices
 
 [Suzanne Repellin](https://github.com/SuzanneRepellin)
 
